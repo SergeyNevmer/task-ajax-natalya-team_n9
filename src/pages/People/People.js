@@ -5,7 +5,7 @@ import styles from "./People.module.css";
 import InfoAboutRequest from "../../components/InfoAboutRequest/InfoAboutRequest";
 import listActors from "../photoСategories/galleryActors";
 
-function getCorrectActor(arr, value) {
+function getCorrectInfo(arr, value) {
   return arr[value];
 }
 
@@ -33,14 +33,14 @@ export default class People extends React.Component {
     actorFromStarWars
       .getActorFromStarWars()
       .then((data) => this.setState({ actor: data }));
-    this.setState({ currentPhoto: getCorrectActor(listActors, count) });
+    this.setState({ currentPhoto: getCorrectInfo(listActors, count) });
   }
 
   componentDidUpdate(prevProps, prevState) {
     const { count } = this.state;
 
     if (prevState.count !== count) {
-      this.setState({ currentPhoto: getCorrectActor(listActors, count) });
+      this.setState({ currentPhoto: getCorrectInfo(listActors, count) });
       this.setState({
         actor: actorFromStarWars
           .getActorFromStarWars(count + 1)

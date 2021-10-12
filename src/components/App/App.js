@@ -3,8 +3,8 @@ import styles from "./App.module.css";
 import { Route, Switch } from "react-router-dom";
 import Home from "../../pages/Home/Home";
 import People from "../../pages/People/People";
-import Planets from "../../pages/Planets";
-import Starships from "../../pages/Starships";
+import Planets from "../../pages/Planets/Planets";
+import Starships from "../../pages/Starships/Starships";
 import PageNotFound from "../../pages/PageNotFound/PageNotFound";
 import NavBar from "../NavBar/NavBar";
 
